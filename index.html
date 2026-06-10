@@ -3,17 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preload" as="style" href="josh-comeau-reset.css" />
+    <link rel="preload" as="style" href="styles.css" />
+    <link rel="preload" as="style" href="home.css" />
+
+    <style>
+      body {
+        --main-red: #992538;
+        background-color: var(--main-red);
+        color: white;
+      }
+    </style>
     <link rel="stylesheet" type="text/css" href="josh-comeau-reset.css" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" type="text/css" href="home.css" />
+
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
     <title>Zawadi</title>
   </head>
   <body>
     <section class="heroSection">
       <div class="heroProfile"></div>
-      <div class="heroSprite" aria-label="Zawadi"></div>
+      <div class="zawadiSprite heroSprite" aria-label="Zawadi"></div>
 
       <div class="heroTagline">
         <p>You can be tech savvy too!</p>
@@ -34,7 +48,7 @@
         href="https://www.tiktok.com/@femmequeeninstem"
         >TikTok</a
       >
-      <a href="/dev.html">Projects + Work</a>
+      <a href="/dev">Projects + Work</a>
       <a
         rel="noopener noreferrer"
         target="_blank"

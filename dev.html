@@ -3,24 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preload" as="style" href="josh-comeau-reset.css" />
+    <link rel="preload" as="style" href="styles.css" />
+    <link rel="preload" as="style" href="dev.css" />
+
+    <style>
+      body {
+        --main-red: #992538;
+        background-color: var(--main-red);
+        color: white;
+      }
+    </style>
     <link rel="stylesheet" type="text/css" href="josh-comeau-reset.css" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" type="text/css" href="dev.css" />
-    <title>Wal — Frontend (and sometimes Fullstack) Developer</title>
+
+    <title>Projects + Work · Zawadi</title>
   </head>
   <body>
-    <section class="heroSection">
-      <h1 class="nameTitle">Wal Wal</h1>
-      <p>
-        <span>Frontend</span>
-        <small>(and sometimes Fullstack)</small>
-        <span>Developer</span>
-        <small>currently at</small>
-        <span>Fellow.app</span>
-        <small>and based in</small>
-        <span>Montreal</span>
-      </p>
-    </section>
+    <nav class="siteNav">
+      <a href="/" class="zawadiSprite navSprite" aria-label="Zawadi"></a>
+    </nav>
     <div class="projects">
       <section class="projectSection">
         <div class="projectSectionDemo">
@@ -67,17 +71,17 @@
         </div>
         <div class="projectSectionDetails">
           <header>
-            <h2>Fellow.app</h2>
+            <h2>Fellow.ai</h2>
             <p>React (Typescript) · Django · Figma</p>
           </header>
           <p>
-            Working closely with designers to realize static mockups with
+            Worked closely with designers to realize static mockups with
             pleasant micro-interactions and delightful animations.
             <br />
-            Advocating for accessibility and UX best practices while ensuring
-            components are reusable and UI works for all screen sizes.<br />
-            Also responsible for building and owning features from bottom to the
-            top of the stack.
+            Advocated for accessibility and UX best practices while ensuring
+            components were reusable and UI worked for all screen sizes.<br />
+            Also was responsible for building and owning features from bottom to
+            the top of the stack.
           </p>
         </div>
       </section>

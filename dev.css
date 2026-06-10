@@ -1,5 +1,14 @@
-body {
-  background: url("grid-paper-tile.svg");
+.siteNav {
+  display: flex;
+  align-items: center;
+  padding: 0 3%;
+  width: 100%;
+  height: 60px;
+  margin: 16px 0;
+}
+
+.navSprite {
+  height: 100%;
 }
 
 a.button {
