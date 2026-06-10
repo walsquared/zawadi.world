@@ -1,0 +1,79 @@
+body {
+  --main-red: #992538;
+  background-color: var(--main-red);
+  color: white;
+}
+
+.heroProfile {
+  background: url("./hero_profile.webp");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  max-width: 480px;
+  min-height: 40svh;
+  aspect-ratio: 1 / 1;
+  margin-bottom: -24px;
+}
+
+.heroSprite {
+  container-name: heroSprite;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 1;
+  background: url("./hero_sprite.webp");
+  background-size: cover;
+  animation-name: sprite;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(4);
+  animation-iteration-count: infinite;
+
+  @media (prefers-reduced-motion) {
+    animation: none;
+  }
+}
+
+@keyframes sprite {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 133%;
+  }
+}
+
+.heroSection,
+.socials,
+.linkTree {
+  width: 90%;
+  max-width: 600px;
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  min-height: 50svh;
+}
+
+.heroTagline {
+  margin: 16px 0;
+}
+
+section.linkTree {
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+
+  a {
+    background: white;
+    color: var(--main-red);
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+}
