@@ -1,13 +1,17 @@
 .videos {
   width: 100%;
   padding: 0 2.5vh;
-  max-width: 600px;
+  max-width: 800px;
   height: calc(100svh - 92px);
   overflow-y: scroll;
   scrollbar-width: none;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 
   anchor-name: --videoFeed;
+
+  @media (width > 700px) {
+    scroll-snap-type: y mandatory;
+  }
 }
 
 .videoEntry {
@@ -17,13 +21,30 @@
 
   display: flex;
   flex-direction: column;
+  align-items: center;
+
+  @media (width > 700px) {
+    min-height: 70svh;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+  }
 }
 
 .embeddedVideo {
-  align-self: center;
   aspect-ratio: 9 / 16;
-  width: calc(45svh * 9 / 16);
+  width: calc(60svh * 9 / 16);
   margin-bottom: 2.5svh;
+
+  @media (width > 700px) {
+    width: 300px;
+  }
+}
+
+.captionSection {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .titleAndDate {
