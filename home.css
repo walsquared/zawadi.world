@@ -39,6 +39,31 @@ body {
   margin: 16px 0;
 }
 
+.socials {
+  margin: 4px 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  a {
+    width: 2rem;
+    height: 2rem;
+
+    transition: transform 50ms ease-out;
+
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.25) rotate(5deg);
+      }
+    }
+
+    &:active {
+      transform: scale(0.8);
+    }
+  }
+}
+
 section.linkTree {
   margin: 16px 0;
   display: flex;

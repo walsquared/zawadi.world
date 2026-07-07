@@ -1,0 +1,80 @@
+.videos {
+  width: 100%;
+  padding: 0 2.5vh;
+  max-width: 600px;
+  height: calc(100svh - 92px);
+  overflow-y: scroll;
+  scrollbar-width: none;
+  scroll-snap-type: y mandatory;
+
+  anchor-name: --videoFeed;
+}
+
+.videoEntry {
+  scroll-snap-align: start;
+  min-height: 90svh;
+  margin-bottom: 64px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.embeddedVideo {
+  align-self: center;
+  aspect-ratio: 9 / 16;
+  width: calc(45svh * 9 / 16);
+  margin-bottom: 2.5svh;
+}
+
+.titleAndDate {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.videoTitle {
+  font-size: 1.25rem;
+}
+
+.videoDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 4 px;
+}
+
+.videoAltText {
+  display: none;
+}
+
+.scrollButtons {
+  position: absolute;
+  position-anchor: --videoFeed;
+  left: anchor(right);
+  top: calc(50% - 8px - 2rem);
+
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+
+  @media (width > 700px) {
+    display: flex;
+  }
+
+  button {
+    width: 2rem;
+    height: 2rem;
+
+    transition: transform 50ms ease-out;
+
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.25);
+      }
+    }
+
+    &:active {
+      transform: scale(0.8);
+      color: red;
+    }
+  }
+}
